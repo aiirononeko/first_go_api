@@ -30,7 +30,7 @@ func main() {
 		return c.String(http.StatusOK, "{\"token\":\""+token+"\"}")
 	})
 	// サーバー起動
-	e.Logger.Fatal(e.Start(":1323"))
+	e.Logger.Fatal(e.Start(":" + os.Getenv("PORT")))
 }
 func helloWorld(c echo.Context) error {
 	return c.String(http.StatusOK, "hello world!!")
