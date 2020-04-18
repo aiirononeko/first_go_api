@@ -2,6 +2,7 @@ package main
 import (
 	"net/http"
 	"github.com/labstack/echo"
+	"os"
 )
 type User struct {
 	Email    string `json:"email"`
